@@ -18,13 +18,14 @@
 </template>
 
 <script>
+import ElDivider from "element-ui/lib/divider";
 import NodeConfig from "./NodeConfig";
 import Installation from "./Installation";
 import nodes from "../../domain/nodes";
 
 export default {
     name:       "Configuration",
-    components: {NodeConfig, Installation},
+    components: {NodeConfig, Installation, ElDivider},
     props:      {
         projections: Object
     },

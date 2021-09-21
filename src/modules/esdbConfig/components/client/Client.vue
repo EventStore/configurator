@@ -54,6 +54,8 @@
 </template>
 
 <script>
+import ElForm from "element-ui/lib/form";
+import ElDivider from "element-ui/lib/divider";
 import ClientNodes from "./ClientNodes";
 import FormSwitch from "../form/FormSwitch";
 import Port from "../shared/Port";
@@ -65,7 +67,7 @@ import validationMixin from "../../../common/validationMixin";
 export default {
     name:       "Client",
     mixins:     [validationMixin],
-    components: {Gossip, Port, FormSwitch, ClientNodes},
+    components: {Gossip, Port, FormSwitch, ClientNodes, ElForm, ElDivider},
     computed:   {
         client:    () => store,
         gossip:    () => store.gossip,

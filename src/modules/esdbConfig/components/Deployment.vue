@@ -76,6 +76,16 @@
 </template>
 
 <script>
+import ElTabs from "element-ui/lib/tabs";
+import ElTabPane from "element-ui/lib/tab-pane";
+import ElForm from "element-ui/lib/form";
+import ElFormItem from "element-ui/lib/form-item";
+import ElDivider from "element-ui/lib/divider";
+import ElCol from "element-ui/lib/col";
+import ElButton from "element-ui/lib/button";
+import ElRadioGroup from "element-ui/lib/radio-group";
+import ElRadioButton from "element-ui/lib/radio-button";
+
 import Directories from "./deployment/Directories";
 import Certificates from "./result/Certificates";
 import Configuration from "./result/Configuration";
@@ -91,6 +101,15 @@ import validation from "../domain/validation";
 export default {
     name:       "Deployment",
     components: {
+        ElTabs,
+        ElTabPane,
+        ElForm,
+        ElFormItem,
+        ElDivider,
+        ElCol,
+        ElButton,
+        ElRadioGroup,
+        ElRadioButton,
         Client,
         Topology,
         Platform,

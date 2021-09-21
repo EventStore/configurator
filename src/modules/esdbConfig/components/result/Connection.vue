@@ -28,10 +28,14 @@
 </template>
 
 <script>
+import ElButton from "element-ui/lib/button";
+import ElRadioGroup from "element-ui/lib/radio-group";
+import ElRadioButton from "element-ui/lib/radio-button";
 import connection from "../../calc/connection";
 
 export default {
     name: "Connection",
+    components: {ElButton, ElRadioButton, ElRadioGroup},
     // mixins: []
     data() {
         return {

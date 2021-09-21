@@ -40,6 +40,8 @@
 </template>
 
 <script>
+import ElForm from "element-ui/lib/form";
+import ElDivider from "element-ui/lib/divider";
 import FormInput from "../form/FormInput";
 import store from "../../domain/directories";
 import validationMixin from "../../../common/validationMixin";
@@ -47,7 +49,7 @@ import validationMixin from "../../../common/validationMixin";
 export default {
     name:       "Directories",
     mixins:     [validationMixin],
-    components: {FormInput},
+    components: {FormInput, ElForm, ElDivider},
     computed:   {
         state:         () => store,
         data:          store.property("data"),

@@ -13,10 +13,13 @@
 </template>
 
 <script>
+import ElCol from "element-ui/lib/col";
+import ElRow from "element-ui/lib/row";
 import {safe} from "../../../common/strings";
 
 export default {
     name:     "CertSan",
+    components: {ElCol, ElRow},
     props:    {
         extType:  String,
         extValue: String

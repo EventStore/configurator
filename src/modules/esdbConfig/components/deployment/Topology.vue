@@ -59,6 +59,11 @@
 </template>
 
 <script>
+import ElForm from "element-ui/lib/form";
+import ElFormItem from "element-ui/lib/form-item";
+import ElDivider from "element-ui/lib/divider";
+import ElSwitch from "element-ui/lib/switch";
+
 import FormSwitch from "../form/FormSwitch";
 import Port from "../shared/Port";
 import ClusterNodes from "./ClusterNodes";
@@ -70,7 +75,7 @@ import validationMixin from "../../../common/validationMixin";
 export default {
     name:       "Topology",
     mixins:     [validationMixin],
-    components: {ClusterNodes, FormSwitch, Port, Gossip},
+    components: {ClusterNodes, FormSwitch, Port, Gossip, ElForm, ElFormItem, ElDivider, ElSwitch},
     computed:   {
         topology:     () => topology,
         nodes:        () => nodes.nodes,

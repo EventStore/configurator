@@ -53,12 +53,21 @@
 </template>
 
 <script>
+import ElForm from "element-ui/lib/form";
+import ElFormItem from "element-ui/lib/form-item";
+import ElDivider from "element-ui/lib/divider";
+import ElCol from "element-ui/lib/col";
+import ElRadioGroup from "element-ui/lib/radio-group";
+import ElRadioButton from "element-ui/lib/radio-button";
+import ElSwitch from "element-ui/lib/switch";
+import ElInput from "element-ui/lib/input";
 import store from "../../domain/security";
 import {error, ok} from "../../../lib/validate";
 import validationMixin from "../../../common/validationMixin";
 
 export default {
     name:     "Security",
+    components: {ElForm, ElFormItem, ElCol, ElDivider, ElRadioGroup, ElRadioButton, ElSwitch, ElInput},
     mixins:   [validationMixin],
     computed: {
         secure:         store.extendedProperty("secure", "updateSecurity"),

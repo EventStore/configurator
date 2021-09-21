@@ -20,12 +20,16 @@
 </template>
 
 <script>
+import ElForm from "element-ui/lib/form";
+import ElFormItem from "element-ui/lib/form-item";
+import ElButton from "element-ui/lib/button";
+
 import ErrorSection from "./ErrorSection";
 import validation from "../domain/validation";
 
 export default {
     name:       "Errors",
-    components: {ErrorSection},
+    components: {ErrorSection, ElForm, ElFormItem, ElButton},
     data() {
         return {
             validated: false,

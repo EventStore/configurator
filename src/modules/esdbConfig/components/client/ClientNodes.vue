@@ -31,10 +31,14 @@
 </template>
 
 <script>
+import ElForm from "element-ui/lib/form";
+import ElFormItem from "element-ui/lib/form-item";
+import ElInput from "element-ui/lib/input";
 import nodeMixin from "../../../common/nodeMixin";
 
 export default {
     name:    "ClientNodes",
+    components: {ElForm, ElFormItem, ElInput},
     mixins:  [nodeMixin],
     props:   {
         nodes:             Array,

@@ -46,16 +46,30 @@
 </template>
 
 <script>
+import ElForm from "element-ui/lib/form";
+import ElFormItem from "element-ui/lib/form-item";
+import ElInput from "element-ui/lib/input";
+import ElCol from "element-ui/lib/col";
+import ElRadioGroup from "element-ui/lib/radio-group";
+import ElRadioButton from "element-ui/lib/radio-button";
 import validationMixin from "../validationMixin";
 
 export default {
-    name:     "Gossip",
-    mixins:   [validationMixin],
-    props:    {
+    name:       "Gossip",
+    components: {
+        ElForm,
+        ElFormItem,
+        ElCol,
+        ElInput,
+        ElRadioGroup,
+        ElRadioButton
+    },
+    mixins:     [validationMixin],
+    props:      {
         gossip: Object,
         nodes:  Array
     },
-    computed: {
+    computed:   {
         isDnsGossip() {
             return this.gossip.isDnsGossip();
         },
@@ -78,7 +92,7 @@ export default {
             return null;
         }
     },
-    methods:  {
+    methods:    {
         async validateGossip(rule, value, callback) {
             if (!this.nodes) return;
 

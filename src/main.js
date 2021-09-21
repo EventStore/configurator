@@ -1,7 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
 import Vuex from "vuex";
-import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import "./styles/element-variables.scss"
 import VuePrism from "vue-prism";
@@ -20,7 +19,7 @@ import store from "./store";
 Vue.config.productionTip = false;
 
 Vue.use(Vuex);
-Vue.use(ElementUI);
+// Vue.use(ElementUI);
 Vue.use(VuePrism);
 Vue.component("prism", Prism);
 

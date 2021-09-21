@@ -15,8 +15,13 @@
 </template>
 
 <script>
+import ElFormItem from "element-ui/lib/form-item";
+import ElInput from "element-ui/lib/input";
+import ElCol from "element-ui/lib/col";
+
 export default {
     name:    "Port",
+    components: {ElFormItem, ElCol, ElInput},
     props:   {
         label:   String,
         prop:    String,

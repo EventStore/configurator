@@ -61,12 +61,16 @@
 </template>
 
 <script>
+import ElForm from "element-ui/lib/form";
+import ElFormItem from "element-ui/lib/form-item";
+import ElInput from "element-ui/lib/input";
 /* eslint-disable no-unused-vars */
 import nodesStore from "../../domain/nodes";
 import nodeMixin from "../../../common/nodeMixin";
 
 export default {
     name:     "ClusterNode",
+    components: {ElForm, ElFormItem, ElInput},
     mixins:   [nodeMixin],
     props:    {
         nodeIndex:        Number,

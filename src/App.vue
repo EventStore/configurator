@@ -8,7 +8,10 @@
 import Deployment from "./modules/esdbConfig/components/Deployment";
 
 export default {
-    components: {Deployment}
+    components: {Deployment},
+    created() {
+        document.title = "EventStore Configurator"
+    }
 }
 </script>
 

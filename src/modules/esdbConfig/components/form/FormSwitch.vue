@@ -1,13 +1,13 @@
 <template>
   <ElFormItem
-      :label="label"
-      :prop="prop"
+          :label="label"
+          :prop="prop"
   >
     <ElCol :span="5">
       <ElSwitch
-          v-bind:value="value"
-          v-on:input="updateValue($event)"
-          :disabled="disabled"
+              v-bind:value="value"
+              v-on:input="updateValue($event)"
+              :disabled="disabled"
       />
     </ElCol>
     <ElCol :span="1">&nbsp;</ElCol>
@@ -18,19 +18,26 @@
 </template>
 
 <script>
+import ElFormItem from "element-ui/lib/form-item";
+import ElSwitch from "element-ui/lib/switch";
+import ElCol from "element-ui/lib/col";
+
 export default {
-  name: "FormSwitch",
-  props: {
-    label: String,
-    prop: String,
-    value: Boolean,
-    disabled: Boolean
-  },
-  methods: {
-    updateValue(val) {
-      this.$emit("input", val);
+    name:       "FormSwitch",
+    components: {
+        ElFormItem, ElSwitch, ElCol
+    },
+    props:      {
+        label:    String,
+        prop:     String,
+        value:    Boolean,
+        disabled: Boolean
+    },
+    methods:    {
+        updateValue(val) {
+            this.$emit("input", val);
+        }
     }
-  }
 }
 </script>
 

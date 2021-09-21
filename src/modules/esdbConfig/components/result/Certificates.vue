@@ -92,6 +92,12 @@
 </template>
 
 <script>
+import ElForm from "element-ui/lib/form";
+import ElFormItem from "element-ui/lib/form-item";
+import ElDivider from "element-ui/lib/divider";
+import ElRadioGroup from "element-ui/lib/radio-group";
+import ElRadioButton from "element-ui/lib/radio-button";
+
 import SingleColumnRow from "../form/SingleColumnRow";
 import CertCn from "../security/CertCn";
 import CertSan from "../security/CertSan";
@@ -100,7 +106,8 @@ import NodeCertificate from "./NodeCertificate";
 
 export default {
     name:       "Certificates",
-    components: {NodeCertificate, CertCn, CertSan, SingleColumnRow},
+    components: {NodeCertificate, CertCn, CertSan, SingleColumnRow,
+    ElDivider, ElForm, ElRadioGroup, ElRadioButton, ElFormItem},
     props:      {
         directories: Object,
         topology:    Object,

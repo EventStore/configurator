@@ -7,8 +7,14 @@
 </template>
 
 <script>
+import ElCol from "element-ui/lib/col";
+import ElRow from "element-ui/lib/row";
+
 export default {
-  name: "SingleColumnRow"
+    name:       "SingleColumnRow",
+    components: {
+        ElCol, ElRow
+    }
 }
 </script>
 

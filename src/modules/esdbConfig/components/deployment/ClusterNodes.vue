@@ -2,12 +2,13 @@
   <div>
     <ElFormItem label="Number of nodes:" prop="nodesCount">
       <ElCol :span="5">
-        <ElInput-number
+        <ElInputNumber
                 v-model="nodesCount"
                 :min="minNodes"
                 :max="maxNodes"
+                style="width: 100%"
         >
-        </ElInput-number>
+        </ElInputNumber>
       </ElCol>
       <ElCol :span="1">&nbsp;</ElCol>
       <ElCol :span="16" v-show="isCluster" class="form-help">
@@ -30,12 +31,16 @@
 </template>
 
 <script>
+import ElFormItem from "element-ui/lib/form-item";
+import ElInputNumber from "element-ui/lib/input-number";
+import ElCol from "element-ui/lib/col";
+
 import ClusterNode from "./ClusterNode";
 import nodesStore from "../../domain/nodes";
 
 export default {
     name:       "ClusterNodes",
-    components: {ClusterNode},
+    components: {ClusterNode, ElFormItem, ElCol, ElInputNumber},
     props:      {
         showIntIp:        Boolean,
         isCluster:        Boolean,

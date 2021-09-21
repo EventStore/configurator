@@ -14,7 +14,7 @@
       </p>
       <transition name="slide">
         <div v-show="ent">
-          <span class="ElFormItem__label">Package key:</span>
+          <span class="ElFormItem__label">Package key: </span>
           <ElInput placeholder="Enter package key" v-model="key" style="width: 300px"></ElInput>
           <p></p>
           <ElRadioGroup v-model="os">
@@ -76,12 +76,16 @@
 </template>
 
 <script>
+import ElRadioGroup from "element-ui/lib/radio-group";
+import ElRadioButton from "element-ui/lib/radio-button";
+import ElSwitch from "element-ui/lib/switch";
+import ElInput from "element-ui/lib/input";
 import Download from "./Download";
 import installation from "../../calc/installation";
 
 export default {
     name:       "Installation",
-    components: {Download},
+    components: {Download, ElRadioGroup, ElRadioButton, ElSwitch, ElInput},
     data() {
         return {
             ent: false,
