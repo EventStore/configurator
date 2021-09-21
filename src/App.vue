@@ -1,32 +1,32 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Deployment></Deployment>
   </div>
 </template>
+
+<script>
+import Deployment from "./modules/esdbConfig/components/Deployment";
+
+export default {
+    components: {Deployment}
+}
+</script>
 
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
+  position: absolute;
+  width: 780px;
+  left: 50%;
+  margin-left: -390px;
+  box-sizing: border-box;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: 0.8rem !important;
 }
 </style>
