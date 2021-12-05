@@ -29,12 +29,12 @@ sudo ${pkgmgr} install eventstore-${ent ? "commercial" : "oss"}${ver}`;
 function version(os) {
     switch (os) {
         case "ubuntu":
-            return "=20.10.0"
+            return "=21.10.0"
         case "centos":
-            return "-v20.10.0-1.x80_64"
+            return "-v21.10.0-1.x80_64"
         case "amazon":
-            return "-v20.10.0-1.x80_64"
+            return "-v21.10.0-1.x80_64"
         case "oracle":
-            return "-v20.10.0-1.x80_64"
+            return "-v21.10.0-1.x80_64"
     }
 }
