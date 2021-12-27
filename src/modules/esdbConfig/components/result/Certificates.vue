@@ -17,7 +17,7 @@
       <div v-else>
         We have a <a href="https://developers.eventstore.com/server/v20/security/configuration.html#certificate-generation-cli" target="_blank">certificate
         generation
-        tool</a>, which creates certificated adopted for EventStoreDB.<br><br>
+        tool</a>, which creates certificated adapted for EventStoreDB.<br><br>
 
         <ElDivider content-position="right">Download the tool</ElDivider>
 
@@ -62,7 +62,7 @@
 
         <ElDivider content-position="right">Generate certificates for nodes</ElDivider>
 
-        You need to generate self-signed certificates for each node as described below.
+        You need to generate certificates signed by the CA for each node as described below.
 
         <NodeCertificate
                 v-for="node in config.nodes"

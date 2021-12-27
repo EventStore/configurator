@@ -56,8 +56,8 @@ export default new Vue({
         },
         certCnHelp() {
             return this.isSelfSigned
-                ? "Must be <code>eventstoredb-node</code> for self-signed certificate."
-                : `You need a ${this.isCluster ? "wildcard " : ""}certificate signed by a public trusted CA.`;
+                ? "Must be <code>eventstoredb-node</code> for a certificate signed by a private CA."
+                : `You need a ${this.isCluster ? "wildcard " : ""}certificate signed by a publicly trusted CA.`;
         }
     },
 

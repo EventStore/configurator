@@ -21,7 +21,7 @@
                 label="Certificate:"
                 prop="cert">
           <ElRadioGroup v-model="cert">
-            <ElRadioButton label="self-signed">Self-signed</ElRadioButton>
+            <ElRadioButton label="self-signed">Private CA</ElRadioButton>
             <ElRadioButton label="trusted">Public CA</ElRadioButton>
           </ElRadioGroup>
         </ElFormItem>
